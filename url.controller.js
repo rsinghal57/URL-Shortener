@@ -2,7 +2,7 @@
 const Url = require('./url.model.js');
 
 //This is basically your domain name
-const baseUrl = 'http://localhost:'+process.env.PORT;
+const baseUrl =  process.env.BASE_URL  || 'http://localhost:'+process.env.PORT;
 
 const createShortLink = async (req, res) => {
     //get the originalUrl and unique_name from the request's body
